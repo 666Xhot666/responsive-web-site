@@ -69,13 +69,16 @@
 .navbar-menu a:hover {
   color: #48dbfb !important;
 }
-.sticky{
+
+.sticky {
   background-color: #fff;
   padding: 18px 0;
 }
-.sticky .navbar-menu a{
-  color:#111;
+
+.sticky .navbar-menu a {
+  color: #111;
 }
+
 .sticky .menu-toggler span {
   background-color: #111;
 }
@@ -130,13 +133,13 @@
   40% {
     content: " A Developer"
   }
+
   80% {
     content: " A Designer"
-
   }
 }
 
-.sm a{
+.sm a {
   color: #fff;
   font-size: 22px;
   margin: 0 10px;
@@ -147,11 +150,11 @@
   color: #48dbfb;
 }
 
-#home .buttons{
+#home .buttons {
   margin-top: 60px;
 }
 
-#home .buttons a{
+#home .buttons a {
   display: inline-block;
   margin: 15px 30px;
   color: #48dbfb;
@@ -160,22 +163,147 @@
   width: 180px;
   border: 1px solid;
   padding: 14px 0;
-  border-radius:6px;
-  transition:0.2s linear;
+  border-radius: 6px;
+  transition: 0.2s linear;
 }
 
 #home .buttons a:hover,
-#home .buttons a:nth-child(2)
- {
+#home .buttons a:nth-child(2) {
   background-color: #48dbfb;
-  color:#fff;
+  color: #fff;
 }
 
-@media screen and (max-width: 980px){
-  .menu-toggler{
-    display:block;
+section {
+  padding: 100px 0;
+  background: #f1f1f2;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: #111;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #111;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background: #48dbfb;
+  border: 4px solid #f1f1f1;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-pic {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  margin: 10px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.about-text h3 span:nth-child(1)::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #444;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 14px;
+}
+
+.about-text p {
+  font-size: 17px;
+  text-align: justify;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+.skills {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: calc(50% - 20px);
+  margin: 15px 0;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-bar {
+  height: 3px;
+  background-color: #ddd;
+  margin-top: 15px;
+  position: relative;
+}
+
+.skill-bar::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  background-color: #48dbfb;
+  bottom: 0;
+}
+
+.html::after{
+  width:90%;
+}
+.css::after{
+  width:80%;
+}
+.js::after{
+  width:80%;
+}
+.mongo::after{
+  width:50%;
+}
+.react::after{
+  width:30%;
+}
+.node::after{
+  width:60%;
+}
+
+@media screen and (max-width: 980px) {
+  .menu-toggler {
+    display: block;
   }
-  .navbar-menu{
+
+  .navbar-menu {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -186,26 +314,51 @@
     padding: 80px 50px;
     transition: 0.3s linear;
   }
-  .navbar-menu a{
+
+  .navbar-menu a {
     display: block;
     font-size: 30px;
     margin: 30px 0;
   }
-  .sticky .navbar-menu{
-    background-color:  #f1f3f6;
+
+  .sticky .navbar-menu {
+    background-color: #f1f3f6;
   }
+
   .navbar-menu.active {
     right: 0;
   }
-  .menu-toggler.active span:nth-child(1){
+
+  .menu-toggler.active span:nth-child(1) {
     transform: rotate(-45deg);
     top: 4px;
   }
-  .menu-toggler.active span:nth-child(2){
-  opacity:0;
+
+  .menu-toggler.active span:nth-child(2) {
+    opacity: 0;
   }
-  .menu-toggler.active span:nth-child(3){
+
+  .menu-toggler.active span:nth-child(3) {
     transform: rotate(45deg);
     bottom: 14px;
+  }
+  .inner-width {
+    max-width: 800px;
+  }
+  .about-pic {
+    margin: 0 auto 60px;
+  }
+  .about-text{
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .inner-width {
+    padding: 0 20px;
+  }
+  .skill {
+    width: 100%;
   }
 }
